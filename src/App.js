@@ -19,13 +19,9 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/add" element={<AddProduct />} />  
-        <Route 
-          path="*"
-          element={
-            <p>There's nothing here!</p>
-          }
-        />
-      </Routes>    
+        
+      </Routes> 
     </Container>
+    
   );
 }
