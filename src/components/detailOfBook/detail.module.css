@@ -1,53 +1,10 @@
-.MuiContainer-root.productView {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin: 150px 0 100px 0;
-    margin-top: 50px;
-  }
-  
-  .productView .imageWrapper img {
-    width: 100%;
-  }
-  
-  .productView .text {
-    color: #000;
-  }
-  
-  .productView .text h2 {
-    color: #000;
-    font-size: 30px;
-  }
-  
-  .productView .text h3 {color: #000;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-  
-  .MuiContainer-root.productView .custom-button {
-    color: white;
-    background-color: #1C2331;
-  }
-  
-  .MuiContainer-root.productView .custom-button:hover {
-    color: white;
-    background-color: #2a344a;
-  }
-  
-  .MuiContainer-root.productView .custom-button svg {
-    margin-right: 10px;
-  }
-  
-  
-  .productView .MuiGrid-root .MuiGrid-item {
-    padding: 5px 15px;
-  }
-  
-  @media (min-width: 960px) {
-    .MuiContainer-root.productView {
-      height: 88vh;
-      margin: 40px 0 0;
-    }
-  }
+
+.container {
+  position: relative !important;
+  margin-top: 50px;
+}
+
+.container .content .buttonAdd {
+  bottom: 0 !important; 
+}
+

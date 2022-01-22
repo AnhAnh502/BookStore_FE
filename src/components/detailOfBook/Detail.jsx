@@ -9,6 +9,7 @@ import './detail.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 const Detail = () => {
 
     const [product, setProduct] = useState({});
@@ -21,6 +22,7 @@ const Detail = () => {
 
       useEffect(() => {
         const getBooks = async (id) => {
+
           const Books = await callBookApi();
           const book = Books[id];
           if(book) setProduct(book);
@@ -28,7 +30,6 @@ const Detail = () => {
       getBooks();
       }, []);
 
-      console.log(product);
 
       const handleIncrease = () => {
         setNumber(number + 1)
