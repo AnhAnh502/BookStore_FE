@@ -27,12 +27,16 @@ export default function TotalPrice() {
         dispatch(clearCartAction)
     }
 
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
     return (
         <div>
             <Card className='shadow-sm p-3 mb-5'>
                 <div className='d-flex justify-content-between'>
                     <p className='fs-5'>Total</p>
-                    <p  className='fs-5 fw-bold text-danger'>{`${totalPrices} VNĐ`}</p>
+                    <p  className='fs-5 fw-bold text-danger'>{`${numberWithCommas(totalPrices)} VNĐ`}</p>
                 </div>
                 <ButtonGroup>
                     <LinkContainer to='/'>
