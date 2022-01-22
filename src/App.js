@@ -5,6 +5,7 @@ import './App.css';
 import Bought from './pages/Bought';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
+import Detail from "./components/detailOfBook/Detail";
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import AddProduct from './pages/AddProduct';
@@ -14,6 +15,7 @@ export default function App() {
     <Container fluid className="App bg-light">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products/:id" element={<Detail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/bought" element={<Bought />} />
         <Route path="/login" element={<Login />} />
