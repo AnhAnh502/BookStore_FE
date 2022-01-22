@@ -6,6 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 import App from './App.js';
 import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
+import 'font-awesome/css/font-awesome.min.css'
 
 ReactDOM.render(
   <Provider store={store}>
