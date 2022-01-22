@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, UPDATE_PRODUCT, UPDATE_TOTALPRICES, DELETE_PRODUCT } from "../constants/cart";
+import { ADD_PRODUCT, UPDATE_PRODUCT, UPDATE_TOTALPRICES, DELETE_PRODUCT, CLEAR_CART } from "../constants/cart";
 
 const initialState = {
     selectedProducts: [
@@ -69,6 +69,12 @@ const cartReducer = (state = initialState, action) => {
             return {
                 ...state,
                 selectedProducts: newProducts
+            }
+        case CLEAR_CART:
+            return {
+                ...state,
+                selectedProducts: [],
+                totalPrices: 0
             }
         default:
             return state
