@@ -7,7 +7,7 @@ export default function Header() {
     const productsInCart = useSelector(state => state.cart.selectedProducts.length)
 
     return (
-        <Navbar bg="light" expand="lg" className='shadow-sm' sticky="top">
+        <Navbar bg="light" expand="lg" className='shadow-sm px-3' sticky="top">
             <LinkContainer to='/'>
                 <Navbar.Brand>Book Store</Navbar.Brand>
             </LinkContainer>
