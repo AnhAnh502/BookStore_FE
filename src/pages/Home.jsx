@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/common/Header/Header';
-import Product from './Product';
+import Product from '../components/Home/Product/Product'
 // import Carousel from 'react-bootstrap/Carousel'
 // import { Carousel, Button, Container } from 'react-bootstrap';
 
