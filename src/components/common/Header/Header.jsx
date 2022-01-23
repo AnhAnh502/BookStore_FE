@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <Navbar bg="light" expand="lg" className='shadow-sm px-3' sticky="top">
-            <LinkContainer to='/'>
+            <LinkContainer className="navbar-brand mx-auto fw-bold" to='/'>
                 <Navbar.Brand>Book Store</Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="navbarScroll" />

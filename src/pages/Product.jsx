@@ -1,24 +1,28 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+// import { LinkContainer } from 'react-router-bootstrap';
+import { Container} from 'react-bootstrap';
 import DATA from '../Data'
 
 const Product = () => {
 
     const cardItem = (item) => {
         return (
-            <div class="card my-5 py-4" key={item.id} style={{width: "18rem"}}>
+            <Container class="card my-5 py-4" key={item.id} style={{width: "18rem"}}>
                 <img src={item.img} class="card-img-top" alt={item.title}/>
                     <div class="card-body text-center">
                         <h5 class="card-title">{item.title}</h5>
                         <p className="lead">{item.price} VNĐ</p>
-                        <NavLink to={`/products/${item.id}`} class="btn btn-primary">Mua Ngay</NavLink>
+                      
+                            <NavLink to={`/products/${item.id}`} class="btn btn-primary">Mua Ngay</NavLink>
+                         
                     </div>
-</div>
+            </Container>
                 );
     }
 
                 return (
-                <div>
+                <Container>
                     <div className="container py-5">
                         <div className="row">
                             <div className="col-12 text-center">
@@ -32,7 +36,7 @@ const Product = () => {
                             {DATA.map(cardItem)}
                         </div>
                     </div>
-                </div>
+                </Container>
                 )
 }
 

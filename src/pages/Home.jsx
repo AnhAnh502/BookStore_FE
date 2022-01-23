@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../components/common/Header/Header';
 import Product from './Product';
+// import Carousel from 'react-bootstrap/Carousel'
 export default function Home() {
      return (
         <div>
             <Header/>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -16,16 +16,16 @@ export default function Home() {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="/assets/images/home/img1.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
-                </div>
+    </div>
                         <div class="carousel-item">
                             <img src="/assets/images/home/img2.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
-                </div>
+    </div>
                             <div class="carousel-item">
                                 <img src="/assets/images/home/img3.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
-                </div>
+    </div>
                             <div class="carousel-item">
                                 <img src="/assets/images/home/img4.jpg" class="d-block w-100" alt="IPhone" height="500px"/>
-                </div>
+    </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -37,7 +37,6 @@ export default function Home() {
                             </button>
                         </div>
                         <Product/>
-                        
                     </div>
                     )
 }
