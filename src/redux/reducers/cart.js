@@ -1,44 +1,7 @@
-import { ADD_PRODUCT, UPDATE_PRODUCT, UPDATE_TOTALPRICES, DELETE_PRODUCT, CLEAR_CART } from "../constants/cart";
+import { ADD_PRODUCT, UPDATE_PRODUCT, UPDATE_TOTALPRICES, DELETE_PRODUCT, CLEAR_CART, SET_PRODUCT_LIST } from "../constants/cart";
 
 const initialState = {
-    selectedProducts: [
-        {
-            id: 1,
-            name: 'Tuổi trẻ đáng giá bao nhiêu',
-            price: 30000,
-            quantities: 1
-        },
-        {
-            id: 2,
-            name: 'Người thành công làm gì vào buổi tối',
-            price: 24000,
-            quantities: 4
-        },
-        {
-            id: 3,
-            name: 'Tuổi trẻ đáng giá bao nhiêu',
-            price: 17000,
-            quantities: 4
-        },
-        {
-            id: 4,
-            name: 'Tuổi trẻ đáng giá bao nhiêu',
-            price: 20000,
-            quantities: 4
-        },
-        {
-            id: 5,
-            name: 'Tuổi trẻ đáng giá bao nhiêu',
-            price: 50000,
-            quantities: 4
-        },
-        {
-            id: 6,
-            name: 'Tuổi trẻ đáng giá bao nhiêu',
-            price: 10000,
-            quantities: 4
-        }
-    ],
+    selectedProducts: [],
     totalPrices: 0
 }
 
@@ -75,6 +38,11 @@ const cartReducer = (state = initialState, action) => {
                 ...state,
                 selectedProducts: [],
                 totalPrices: 0
+            }
+        case SET_PRODUCT_LIST:
+            return {
+                ...state,
+                selectedProducts: action.payload
             }
         default:
             return state
