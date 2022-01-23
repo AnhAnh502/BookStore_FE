@@ -1,9 +1,22 @@
-import React from 'react';
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import ProductForm from "../components/AddProduct/ProductForm";
+import Header from "../components/common/Header/Header";
 
 export default function AddProduct() {
-    return (
-        <div>
-            <h1>Add product</h1>
-        </div>
-    );
+  // const user = useSelector((state) => state.user.name);
+
+  return (
+    <>
+      <Header />
+      <Container fluid>
+        <Row className="d-flex justify-content-center">
+          <Col md={6}>
+            <ProductForm />
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
