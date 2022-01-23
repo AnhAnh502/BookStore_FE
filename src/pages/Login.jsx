@@ -8,12 +8,10 @@ import {
   Form,
   Row,
 } from "react-bootstrap";
-import { useDispatch } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { axiosInstance } from "../apis/baseApi";
 import Particle from "../components/common/Particle";
-import { setUser } from "../redux/actions/user";
 
 export default function Login() {
   const [account, setAccount] = useState({
@@ -23,7 +21,6 @@ export default function Login() {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const handleShowAlert = (message) => {
     setAlertMessage(message);
@@ -43,7 +40,7 @@ export default function Login() {
           token: res.data.token.accessToken,
           role: res.data.role,
         };
-        dispatch(setUser(user));
+        window.localStorage.setItem("user", JSON.stringify(user));
         navigate("/");
       }
     } catch (err) {
