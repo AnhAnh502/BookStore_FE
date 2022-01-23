@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 // import { LinkContainer } from 'react-router-bootstrap';
 import { Container} from 'react-bootstrap';
 import DATA from '../Data'
-
+import '../index.css'
 const Product = () => {
 
     const cardItem = (item) => {
@@ -13,14 +13,11 @@ const Product = () => {
                     <div class="card-body text-center">
                         <h5 class="card-title">{item.title}</h5>
                         <p className="lead">{item.price} VNĐ</p>
-                      
-                            <NavLink to={`/products/${item.id}`} class="btn btn-primary">Mua Ngay</NavLink>
-                         
+                        <NavLink to={`/products/${item.id}`} className="btn btn-primary">Chi Tiết</NavLink>
                     </div>
             </Container>
                 );
     }
-
                 return (
                 <Container>
                     <div className="container py-5">
