@@ -42,6 +42,14 @@ const Detail = () => {
         setNumber(number===0? 0 : number - 1)
       }
 
+      const postToCart = async () => {
+        // let dataToCart = await axios.post("/api/cart",{
+        //   name:product.name,
+        //   number: number
+        // })
+        
+      }
+
     return (
       <>
         <Header />
@@ -85,7 +93,7 @@ const Detail = () => {
                               <div class="col-lg-12 mt-3">
                                   <div class="row">
                                       <div class="col-lg-6 pb-2">
-                                          <Link to="/cart" class="btn btn-danger w-100">Thêm vào giỏ hàng</Link>
+                                          <Link to="/cart" onClick={postToCart} class="btn btn-danger w-100">Thêm vào giỏ hàng</Link>
                                       </div>
                                   </div>
                               </div>
