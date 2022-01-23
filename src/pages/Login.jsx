@@ -39,8 +39,9 @@ export default function Login() {
       const res = await axiosInstance.post("/Auth/login", account);
       if (res.status === 200) {
         const user = {
-          name: res.data.message,
+          name: res.data.name,
           token: res.data.token.accessToken,
+          role: res.data.role,
         };
         dispatch(setUser(user));
         navigate("/");

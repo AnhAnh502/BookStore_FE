@@ -2,7 +2,8 @@ import { SET_USER, DELETE_USER } from '../constants/user'
 
 const initialState = {
     name: '',
-    token: ''
+    token: '',
+    role: ''
 }
 
 const userReducer = (state = initialState, action) => {
