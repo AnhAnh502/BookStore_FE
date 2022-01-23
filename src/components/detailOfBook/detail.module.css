@@ -25,6 +25,10 @@ body {
   height: 100px;
 }
 
+.right-side-pro-detail {
+  margin-top: 0;
+}
+
 .right-side-pro-detail span {
   font-size: 15px;
 }
@@ -49,8 +53,17 @@ body {
 }
 
 
-@media (min-width:360px) and (max-width:640px) {
+@media only screen and (min-width:360px) and (max-width:640px) {
   .pro-box-section .pro-box img {
       height: auto;
+  }
+  .main-section .left-side-product-box {
+      display: flexbox;
+  }
+  .right-side-pro-detail {
+    margin-top: 50px !important;
+  }
+  .main-section div .left-side-product-box .sm {
+    font-size: 13px !important;
   }
 }
