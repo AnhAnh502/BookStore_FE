@@ -58,7 +58,6 @@ const Detail = () => {
 
     try {
       const res = await axiosInstance.put("/cart", newCart);
-      console.log(res);
     } catch (err) {
       console.error(err.response.data);
     }

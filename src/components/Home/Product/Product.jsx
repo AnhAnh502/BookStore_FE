@@ -8,7 +8,6 @@ const Product = () => {
   const [productlist, setProductList] = useState([]);
   const callBookApi = async () => {
     const response = await axiosInstance.get("/books");
-    console.log(response.data);
     return response.data;
   };
 
@@ -16,7 +15,6 @@ const Product = () => {
     const getProducts = async () => {
       const Books = await callBookApi();
       if (Books) setProductList(Books.products);
-      console.log(productlist);
     };
     getProducts();
   }, []);

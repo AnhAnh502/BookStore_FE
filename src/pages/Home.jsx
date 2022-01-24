@@ -11,7 +11,6 @@ export default function Home() {
   const getCart = async () => {
     try {
       let res = await axiosInstance.get("/cart");
-      console.log(res);
       if (res.status === 200) dispatch(setProductList(res.data.cart));
     } catch (err) {
       console.error(err);
