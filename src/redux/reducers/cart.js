@@ -15,16 +15,27 @@ const initialState = {
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PRODUCT:
-      return {
-        ...state,
-        selectedProducts: [...state.selectedProducts, action.payload],
-      };
+      const index1 = state.selectedProducts.findIndex(
+        (product) => product.book["_id"] === action.payload.book["_id"]
+      );
+      if (index1 !== -1) {
+        const newProductList = [...state.selectedProducts];
+        newProductList[index1].quantity += action.payload.quantity;
+        return {
+          ...state,
+          selectedProducts: newProductList,
+        };
+      } else
+        return {
+          ...state,
+          selectedProducts: [...state.selectedProducts, action.payload],
+        };
     case UPDATE_PRODUCT:
-      const index = state.selectedProducts.findIndex(
+      const index2 = state.selectedProducts.findIndex(
         (product) => product.book["_id"] === action.payload.book["_id"]
       );
       const newProductList = [...state.selectedProducts];
-      newProductList[index] = action.payload;
+      newProductList[index2] = action.payload;
       const newTotalPrices = newProductList.reduce(
         (accumulator, item) => accumulator + item.book.price * item.quantity,
         0
