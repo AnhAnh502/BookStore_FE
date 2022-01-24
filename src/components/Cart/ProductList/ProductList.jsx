@@ -5,6 +5,7 @@ import Product from '../Product/Product';
 
 export default function ProductList() {
     const bookList = useSelector(state => state.cart.selectedProducts)
+    console.log(bookList);
     const dispatch = useDispatch()
     const totalPrices = bookList.reduce((accumulator, item) => accumulator + item.price * item.quantities, 0)
     
