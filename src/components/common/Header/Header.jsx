@@ -47,7 +47,7 @@ export default function Header() {
           <LinkContainer to="/order">
             <Nav.Link>Order</Nav.Link>
           </LinkContainer>
-          <NavDropdown title={{userName}}>
+          <NavDropdown title={userName}>
             <LinkContainer to="/add">
               <NavDropdown.Item>Add Product</NavDropdown.Item>
             </LinkContainer>
