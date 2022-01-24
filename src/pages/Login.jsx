@@ -44,8 +44,7 @@ export default function Login() {
         navigate("/");
       }
     } catch (err) {
-      if (err.response.status === 401)
-        handleShowAlert("Wrong email or password!");
+      handleShowAlert("Wrong email or password!");
     }
   };
 
