@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { axiosInstance } from "../../apis/baseApi";
 import { addProduct } from "../../redux/actions/cart";
-import Header from "../common/Header/Header";
+import Header from "../common/Header";
 import "./detail.module.css";
 
 const Detail = () => {

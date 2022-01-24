@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { axiosInstance } from "../apis/baseApi";
 import OrderList from "../components/Order/OrderList";
 import TotalPrice from "../components/Order/TotalPrice";
-import Header from "../components/common/Header/Header";
+import Header from "../components/common/Header";
 
 export default function Bought() {
   const [orderList, setOrderList] = useState([]);

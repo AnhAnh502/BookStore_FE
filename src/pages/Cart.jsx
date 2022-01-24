@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ProductList from "../components/Cart/ProductList";
 import TotalPrice from "../components/Cart/TotalPrice";
-import Header from "../components/common/Header/Header";
+import Header from "../components/common/Header";
 
 export default function Cart() {
   return (

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { axiosInstance } from "../apis/baseApi";
-import Header from "../components/common/Header/Header";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
 import Product from "../components/Home/Product/Product";
 import { setProductList } from "../redux/actions/cart";
 
@@ -57,35 +58,35 @@ export default function Home() {
             aria-label="Slide 4"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
             <img
               src="https://media.istockphoto.com/photos/books-picture-id949118068?b=1&k=20&m=949118068&s=170667a&w=0&h=YZ_FOpR300sPowTqW0f0NaebJx2KfQvGxbafAIsfALA="
-              class="d-block w-100"
+              className="d-block w-100"
               alt="Book"
               height="500px"
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://cdn.pixabay.com/photo/2021/01/21/15/54/books-5937716__340.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="Book"
               height="500px"
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581__340.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="Book"
               height="500px"
             />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029__340.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="Book"
               height="500px"
             />
@@ -118,6 +119,7 @@ export default function Home() {
         </button>
       </div>
       <Product />
+      <Footer />
     </div>
   );
 }
