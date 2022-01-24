@@ -1,8 +1,9 @@
 import axios from "axios";
 
 const getAccessToken = () => {
-  const user = window.localStorage.getItem("user");
-  const token = JSON.parse(user).token;
+  let user = window.localStorage.getItem("user");
+  let token = "";
+  if (user && user !== "") token = JSON.parse(user).token;
   return token;
 };
 
@@ -12,7 +13,7 @@ export const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   function (config) {
-    const accessToken = getAccessToken();
+    let accessToken = getAccessToken();
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
     }
