@@ -1,6 +1,7 @@
 /* Card */
 .card{
     transition: all 0.5s ease;
+    width: 18rem;
   }
 .card:hover {
     transform: scale(1.01);
