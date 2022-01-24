@@ -15,7 +15,7 @@ export default function Header() {
     (state) => state.cart.selectedProducts.length
   );
   const user = window.localStorage.getItem("user");
-  const userName = JSON.parse(user).name;
+  // const userName = JSON.parse(user).name;
 
   return (
     <Navbar
@@ -41,7 +41,7 @@ export default function Header() {
           <LinkContainer to="/bought">
             <Nav.Link>Bought</Nav.Link>
           </LinkContainer>
-          <NavDropdown title={userName}>
+          <NavDropdown title={user}>
             <LinkContainer to="/add">
               <NavDropdown.Item>Add Product</NavDropdown.Item>
             </LinkContainer>

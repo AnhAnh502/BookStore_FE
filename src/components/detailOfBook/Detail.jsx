@@ -2,17 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import Header from '../common/Header/Header';
-import axios from '../../api/contacts';
+// import axios from '../../api/contacts';
+import { axiosInstance } from '../../apis/baseApi';
 import './detail.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { addToCart } from "../../redux/actions/addToCart";
+// import { addToCart } from "../../redux/actions/addToCart";
+import { addProduct } from '../../redux/actions/cart';
+import { useSelector } from 'react-redux';
 
 
 
 const Detail = () => {
   // let {id} = useParams();
+    // const listBooksAdded = useSelector(state => state.cart.selectedProducts);
+    // console.log(listBooksAdded);
     const dispatch = useDispatch();
 
     const [product, setProduct] = useState({});
@@ -20,14 +25,13 @@ const Detail = () => {
 
     
     const callBookApi = async () => {
-        const response = await axios.get("/api/v1/books")
+        const response = await axiosInstance.get("/books")
         return response.data;
       };
 
       useEffect(() => {
         const getBooks = async () => {
           const Books = await callBookApi();
-          console.log(Books);
           const book = Books.products.find((e) => {
            return  e._id === "61eab6ebaa5731d9327fa0cf"
           })
@@ -46,10 +50,10 @@ const Detail = () => {
 
       const postToCart = () => {
         const newBookAdded = {
-          ...product,
-          quantities: number
-        }
-        const action = addToCart(newBookAdded);
+          book : product,
+          quantity: number
+      }
+        const action = addProduct(newBookAdded);
         dispatch(action);
         console.log(action);
       }
