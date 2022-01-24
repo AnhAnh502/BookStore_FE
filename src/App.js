@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import AddProduct from "./pages/AddProduct";
 import ProtectedRoutes from "./ProtectedRoutes";
-
+import Footer from "./components/common/Header/Footer";
 export default function App() {
   return (
     <Container fluid className="App bg-light">
@@ -26,6 +26,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
+      <Footer/>
     </Container>
   );
 }
