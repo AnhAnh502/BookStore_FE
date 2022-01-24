@@ -6,6 +6,7 @@ import { Container} from 'react-bootstrap';
 // import DATA from '../Data'
 import { axiosInstance } from '../../../apis/baseApi';
 // import '../../../'
+import styles from './Product.module.css'
 
 
 
@@ -28,7 +29,7 @@ const Product = () => {
     
     const cardItem = (item) => {
         return (
-            <Container className="card my-5 py-4" key={item._id} style={{width: "18rem"}}>
+            <Container className={`card my-5 py-4 ${styles.card}`}>
                 <img src={item.imageUrl} className="card-img-top" alt={item.title}/>
                     <div className="card-body text-center">
                         <h5 className="card-title">{item.title}</h5>
