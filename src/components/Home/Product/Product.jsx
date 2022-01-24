@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 // import { LinkContainer } from 'react-router-bootstrap';
 import { Container} from 'react-bootstrap';
 import DATA from '../../../Data'
-import './Product.css'
+import './Product.module.css'
 const Product = () => {
 
     const cardItem = (item) => {
