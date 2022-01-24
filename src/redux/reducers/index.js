@@ -6,7 +6,7 @@ import { combineReducers } from 'redux';
 const rootReducer = combineReducers({
     example: exampleReducer,
     cart: cartReducer,
-    addToCart: addToCartReducer,
+    addToCart: addToCartReducer
 })
 
 export default rootReducer;

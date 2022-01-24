@@ -7,7 +7,7 @@ import './detail.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import addToCartReducer from '../../redux/reducers/addToCart';
+import { addToCart } from "../../redux/actions/addToCart";
 
 
 
@@ -45,9 +45,13 @@ const Detail = () => {
       }
 
       const postToCart = () => {
-        console.log(product);
-        const action = addToCartReducer({...product,number:number})
+        const newBookAdded = {
+          ...product,
+          quantities: number
+        }
+        const action = addToCart(newBookAdded);
         dispatch(action);
+        console.log(action);
       }
 
     return (
@@ -57,7 +61,7 @@ const Detail = () => {
           <div className="col-lg-12 border p-3 main-section bg-white mt-5">
               <div className="row m-5">
                   <div className="col-lg-4 left-side-product-box pb-3">
-                      <img src={product.imageUrl} className="border p-3" width="100%" height="100%" />
+                      <img src={product.imageUrl} className="border p-3" alt='' width="100%" height="100%" />
                       <div className="">
                         <div className='sm h6'>Nhà xuất bản: {product.publisher}</div>
                         <div className='sm h6'>Xuất bản ngày: {product.published}</div>
