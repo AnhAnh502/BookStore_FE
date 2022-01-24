@@ -33,7 +33,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axiosInstance.post("/Auth/login", account);
+      const res = await axiosInstance.post("/auth/login", account);
       if (res.status === 200) {
         const user = {
           name: res.data.name,
