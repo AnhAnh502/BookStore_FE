@@ -3,12 +3,14 @@ import { NavLink } from 'react-router-dom';
 // import { LinkContainer } from 'react-router-bootstrap';
 import { Container} from 'react-bootstrap';
 import DATA from '../../../Data'
-import './Product.css'
+import './product.module.css'
+// import axios from 'axios'
+
 const Product = () => {
 
     const cardItem = (item) => {
         return (          
-            <Container className="card my-5 py-4" key={item.id} style={{width: "18rem"}}>
+            <Container className="card my-5 py-4" key={item.id} style={{width: "18rem" }}>
                 <img src={item.img} className="card-img-top" alt={item.title}/>
                     <div className="card-body text-center">
                         <h5 className="card-title">{item.title}</h5>
