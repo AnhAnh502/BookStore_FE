@@ -25,7 +25,7 @@ export default function Home() {
                             <img src="https://cdn.pixabay.com/photo/2021/01/21/15/54/books-5937716__340.jpg" class="d-block w-100" alt="Book" height="500px"/>
                 </div>
                             <div class="carousel-item">
-                                <img src="https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581__340.jpgg" class="d-block w-100" alt="Book" height="500px"/>
+                                <img src="https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581__340.jpg" class="d-block w-100" alt="Book" height="500px"/>
                 </div>
                             <div class="carousel-item">
                                 <img src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029__340.jpg" class="d-block w-100" alt="Book" height="500px"/>
