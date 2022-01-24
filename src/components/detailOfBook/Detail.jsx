@@ -2,13 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import Header from '../common/Header/Header';
-// import axios from '../../api/contacts';
 import { axiosInstance } from '../../apis/baseApi';
 import './detail.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-// import { addToCart } from "../../redux/actions/addToCart";
 import { addProduct } from '../../redux/actions/cart';
 import { useSelector } from 'react-redux';
 
