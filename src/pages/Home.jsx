@@ -16,18 +16,20 @@ export default function Home() {
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src="/assets/images/home/img1.jpg" className="d-block w-100" alt="Book" height="500px"/>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://media.istockphoto.com/photos/books-picture-id949118068?b=1&k=20&m=949118068&s=170667a&w=0&h=YZ_FOpR300sPowTqW0f0NaebJx2KfQvGxbafAIsfALA=" class="d-block w-100" alt="Book" height="500px"/>
                 </div>
-                        <div className="carousel-item">
-                            <img src="/assets/images/home/img2.jpg" className="d-block w-100" alt="Book" height="500px"/>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2021/01/21/15/54/books-5937716__340.jpg" class="d-block w-100" alt="Book" height="500px"/>
                 </div>
-                            <div className="carousel-item">
-                                <img src="/assets/images/home/img3.jpg" className="d-block w-100" alt="Book" height="500px"/>
+                            <div class="carousel-item">
+                                <img src="https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581__340.jpgg" class="d-block w-100" alt="Book" height="500px"/>
                 </div>
-                            <div className="carousel-item">
-                                <img src="/assets/images/home/img4.jpg" className="d-block w-100" alt="Book" height="500px"/>
+                            <div class="carousel-item">
+                                <img src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029__340.jpg" class="d-block w-100" alt="Book" height="500px"/>
+
                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
