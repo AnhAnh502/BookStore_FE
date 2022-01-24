@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Button,
   Form,
@@ -14,8 +14,14 @@ export default function Header() {
   const productsInCart = useSelector(
     (state) => state.cart.selectedProducts.length
   );
-  // const user = window.localStorage.getItem("user");
-  // const userName = JSON.parse(user).name;
+
+  let userName = "";
+  let user = window.localStorage.getItem("user");
+  if (user) userName = JSON.parse(user).name;
+
+  const handleLogout = () => {
+    window.localStorage.clear();
+  };
 
   return (
     <Navbar
@@ -38,15 +44,17 @@ export default function Header() {
           <LinkContainer to="/">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/bought">
-            <Nav.Link>Bought</Nav.Link>
+          <LinkContainer to="/order">
+            <Nav.Link>Order</Nav.Link>
           </LinkContainer>
-          <NavDropdown title={'a'}>
+          <NavDropdown title={{userName}}>
             <LinkContainer to="/add">
               <NavDropdown.Item>Add Product</NavDropdown.Item>
             </LinkContainer>
             <LinkContainer to="/login">
-              <NavDropdown.Item>Log Out</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => handleLogout()}>
+                Log Out
+              </NavDropdown.Item>
             </LinkContainer>
           </NavDropdown>
         </Nav>

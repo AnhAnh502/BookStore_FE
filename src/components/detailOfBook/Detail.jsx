@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 
 
 const Detail = () => {
-  // let {id} = useParams();
+    let {id} = useParams();
     // const listBooksAdded = useSelector(state => state.cart.selectedProducts);
     // console.log(listBooksAdded);
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ const Detail = () => {
         const getBooks = async () => {
           const Books = await callBookApi();
           const book = Books.products.find((e) => {
-           return  e._id === "61eab6ebaa5731d9327fa0cf"
+           return  e._id === id;
           })
           if(book) setProduct(book);
       }
